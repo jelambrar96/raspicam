@@ -229,7 +229,8 @@ namespace raspicam {
 
             camera_still_port = camera->output[MMAL_CAMERA_CAPTURE_PORT];
 			
-			MMAL_PARAMETER_INT32_T camera_num = {
+			MMAL_PARAMETER_INT32_T camera_num;
+			camera_num = {
 				{MMAL_PARAMETER_CAMERA_NUM, sizeof ( camera_num ) },
 				getCameraNum()
 			};
@@ -240,7 +241,7 @@ namespace raspicam {
                 return 0;
 			}
 
-			MMAL_PARAMETER_INT32_T camera_num = {
+			camera_num = {
 				{MMAL_PARAMETER_CAMERA_NUM, sizeof ( camera_num ) },
 				getCameraNum()
 			};
